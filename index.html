@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>⚛️ Fysik Bas A - Strategisk Kursguide</title>
+    <meta
+      name="description"
+      content="Interaktiv utbildningswebbplats för Fysik Bas A. Strategisk kursguide för tentamensförberedelser med formler, övningar och facit."
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    />
+
+    <!-- KaTeX -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    ></script>
+
+    <!-- App Script -->
+    <script defer src="app.js"></script>
+  </head>
+  <body class="homepage">
+    <!-- Progress Bar (visible in focus mode) -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Settings Panel -->
+    <div class="settings-panel">
+      <button
+        class="settings-btn theme-toggle"
+        onclick="toggleTheme()"
+        title="Byt tema"
+      >
+        ☀️
+      </button>
+      <button
+        class="settings-btn focus-toggle"
+        onclick="toggleFocus()"
+        title="Fokusläge"
+      >
+        🎯
+      </button>
+      <button
+        class="settings-btn font-toggle"
+        onclick="toggleFont()"
+        title="OpenDyslexic"
+      >
+        Aa
+      </button>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <h1>⚛️ Fysik Bas A</h1>
+      <p class="subtitle">
+        Den strategiska vägen till framgång på tentamen. Lär dig de viktigaste
+        koncepten och formlerna genom praktiska övningar.
+      </p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="home-content">
+      <section class="course-section">
+        <h2 class="course-title">Mekanik & Dynamik</h2>
+        <div class="lesson-grid">
+          <a href="lessons/10-newton-enkel.html" class="lesson-card">
+            <span class="card-number">1</span>
+            <span class="card-title">Newtons Andra Lag (Enkelt objekt)</span>
+          </a>
+          <a href="lessons/05-newtons-andra-lag.html" class="lesson-card">
+            <span class="card-number">2</span>
+            <span class="card-title">Newtons Andra Lag (System av objekt)</span>
+          </a>
+          <a href="lessons/11-lutande-plan.html" class="lesson-card">
+            <span class="card-number">3</span>
+            <span class="card-title">Lutande Plan</span>
+          </a>
+          <a href="lessons/07-kinematik.html" class="lesson-card">
+            <span class="card-number">4</span>
+            <span class="card-title">Fritt Fall & Kaströrelse</span>
+          </a>
+          <a href="lessons/04-moment.html" class="lesson-card">
+            <span class="card-number">5</span>
+            <span class="card-title">Momentlagen & Hävstänger</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="course-section">
+        <h2 class="course-title">Energi & Rörelsemängd</h2>
+        <div class="lesson-grid">
+          <a href="lessons/06-energiprincipen.html" class="lesson-card">
+            <span class="card-number">6</span>
+            <span class="card-title">Energiprincipen</span>
+          </a>
+          <a href="lessons/08-arbete-energi.html" class="lesson-card">
+            <span class="card-number">7</span>
+            <span class="card-title">Arbete & Energi</span>
+          </a>
+          <a href="lessons/03-stotar.html" class="lesson-card">
+            <span class="card-number">8</span>
+            <span class="card-title">Oelastisk Stöt</span>
+          </a>
+          <a href="lessons/09-impuls.html" class="lesson-card">
+            <span class="card-number">9</span>
+            <span class="card-title">Impuls & Medelkraft</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="course-section">
+        <h2 class="course-title">Termodynamik & Fluider</h2>
+        <div class="lesson-grid">
+          <a href="lessons/01-varmelara.html" class="lesson-card">
+            <span class="card-number">10</span>
+            <span class="card-title">Värmelära</span>
+          </a>
+          <a href="lessons/02-arkimedes.html" class="lesson-card">
+            <span class="card-number">11</span>
+            <span class="card-title">Arkimedes Princip</span>
+          </a>
+          <a href="lessons/12-tryck-hydraulik.html" class="lesson-card">
+            <span class="card-number">12</span>
+            <span class="card-title">Tryck & Hydraulik</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>Fysik Bas A - Strategisk Kursguide för Tentamensförberedelser</p>
+    </footer>
+  </body>
+</html>

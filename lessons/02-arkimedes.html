@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arkimedes Princip - Fysik Bas A</title>
+  <meta name="description" content="Lär dig Arkimedes princip, lyftkraft och densitet. Beräkna varför föremål flyter eller sjunker.">
+  
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  
+  <div class="settings-panel">
+    <button class="settings-btn theme-toggle" onclick="toggleTheme()" title="Byt tema">☀️</button>
+    <button class="settings-btn focus-toggle" onclick="toggleFocus()" title="Fokusläge">🎯</button>
+    <button class="settings-btn font-toggle" onclick="toggleFont()" title="OpenDyslexic">Aa</button>
+  </div>
+  
+  <a href="../index.html" class="back-link">← Tillbaka till översikten</a>
+  
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 11</span>
+        <h1 class="lesson-title">Arkimedes Princip</h1>
+      </header>
+      
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Förstå begreppet lyftkraft</li>
+          <li>Tillämpa Arkimedes princip</li>
+          <li>Beräkna densitet och flytkraft</li>
+          <li>Avgöra om ett föremål flyter eller sjunker</li>
+        </ul>
+      </div>
+      
+      <section class="section">
+        <h2 class="section-title">Lyftkraft</h2>
+        
+        <p>När ett föremål är nedsänkt i en vätska utsätts det för en uppåtriktad kraft - lyftkraften. Denna kraft är lika stor som tyngden av den vätska som föremålet tränger undan.</p>
+        
+        <div class="formula-box">
+          $$F_{\text{lyft}} = \rho_{\text{vätska}} \cdot V_{\text{undan}} \cdot g$$
+          <p>Lyftkraft = vätskans densitet × undanträngd volym × tyngdacceleration</p>
+        </div>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Symbol</th>
+                <th>Storhet</th>
+                <th>Enhet</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>$F_{\text{lyft}}$</td><td>Lyftkraft</td><td>N</td></tr>
+              <tr><td>$\rho$</td><td>Densitet</td><td>kg/m³</td></tr>
+              <tr><td>$V$</td><td>Volym</td><td>m³</td></tr>
+              <tr><td>$g$</td><td>Tyngdacceleration</td><td>9,82 m/s²</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2 class="section-title">Densitet</h2>
+        
+        <div class="formula-box">
+          $$\rho = \frac{m}{V}$$
+          <p>Densitet = massa / volym</p>
+        </div>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Ämne</th>
+                <th>Densitet (kg/m³)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Vatten</td><td>1 000</td></tr>
+              <tr><td>Havsvatten</td><td>1 025</td></tr>
+              <tr><td>Is</td><td>917</td></tr>
+              <tr><td>Trä (ek)</td><td>700</td></tr>
+              <tr><td>Järn</td><td>7 870</td></tr>
+              <tr><td>Luft</td><td>1,29</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="info-box tip">
+          <h4>💡 Strategisk nyckel</h4>
+          <p>För ett <strong>flytande objekt</strong> gäller alltid: $F_{\text{lyft}} = F_{\text{tyngd}} = mg$. Lyftkraften balanserar exakt tyngdkraften!</p>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2 class="section-title">Flytvillkor</h2>
+        
+        <div class="info-box">
+          <h4>🔄 Tre fall</h4>
+          <p><strong>Flyter:</strong> $\rho_{\text{föremål}} < \rho_{\text{vätska}}$ - föremålet sticker delvis upp</p>
+          <p><strong>Svävar:</strong> $\rho_{\text{föremål}} = \rho_{\text{vätska}}$ - föremålet stannar var som helst</p>
+          <p><strong>Sjunker:</strong> $\rho_{\text{föremål}} > \rho_{\text{vätska}}$ - föremålet faller till botten</p>
+        </div>
+        
+        <div class="example">
+          <div class="example-header">📝 Exempeluppgift</div>
+          <p>Ett träblock (600 kg/m³) med volymen 0,02 m³ flyter i vatten. Hur stor del av blocket sticker upp ovanför vattenytan?</p>
+          
+          <div class="example-steps">
+            <div class="example-step">
+              <strong>Steg 1:</strong> Beräkna blockets massa och tyngd<br>
+              $m = \rho \cdot V = 600 \cdot 0,02 = 12$ kg<br>
+              $F_g = mg = 12 \cdot 9,82 = 117,84$ N
+            </div>
+            <div class="example-step">
+              <strong>Steg 2:</strong> Vid jämvikt är $F_{\text{lyft}} = F_g$<br>
+              $$\rho_{\text{vatten}} \cdot V_{\text{under}} \cdot g = 117,84$$
+              $$1000 \cdot V_{\text{under}} \cdot 9,82 = 117,84$$
+            </div>
+            <div class="example-step">
+              <strong>Steg 3:</strong> Lös ut $V_{\text{under}}$<br>
+              $$V_{\text{under}} = \frac{117,84}{1000 \cdot 9,82} = 0,012 \text{ m}^3$$
+            </div>
+            <div class="example-step">
+              <strong>Steg 4:</strong> Andel ovanför ytan<br>
+              $V_{\text{ovan}} = 0,02 - 0,012 = 0,008$ m³<br>
+              Andel = $\frac{0,008}{0,02} = 40\%$ sticker upp
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E - Grundläggande</span>
+          <ol class="exercise-list">
+            <li>Beräkna lyftkraften på ett föremål med volymen 0,005 m³ som är helt nedsänkt i vatten.</li>
+            <li>Ett järnblock har volymen 0,001 m³. Beräkna dess massa och densitet.</li>
+            <li>En träbit flyter i vatten. Volymen under ytan är 0,003 m³. Hur stor är lyftkraften?</li>
+            <li>Ett föremål med massan 2 kg har volymen 0,004 m³. Flyter det i vatten?</li>
+            <li>Beräkna densiteten för ett föremål med massa 3,5 kg och volym 0,0005 m³.</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C - Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>En flotte (400 kg/m³) har formen av en rektangulär låda (2 m × 1,5 m × 0,3 m). Hur djupt sjunker den i sötvatten?</li>
+            <li>En isberg har massan 5 000 kg. Hur stor volym sticker upp ovanför havsytan?</li>
+            <li>Ett föremål väger 50 N i luft och 32 N i vatten. Beräkna föremålets volym.</li>
+            <li>En kub av okänt material (sida 10 cm) flyter i vatten med 4 cm ovanför ytan. Bestäm materialets densitet.</li>
+            <li>Hur stor pråm (densitet 800 kg/m³) behövs för att bära 1 000 kg last i sötvatten om pråmen har formen av en låda och ska flyta med 20% av höjden ovanför ytan?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A - Avancerad</span>
+          <ol class="exercise-list" start="11">
+            <li>En pingisboll (massa 2,7 g, diameter 40 mm) hålls nedsänkt i vatten. Med vilken acceleration stiger den när den släpps?</li>
+            <li>Ett träblock flyter med 70% av sin volym under ytan i sötvatten. En metallskiva läggs ovanpå blocket så att exakt 90% hamnar under ytan. Hur stor är metallskivans massa om blockets massa är 2 kg?</li>
+            <li>En luftballong med volymen 100 m³ fylls med helium (densitet 0,18 kg/m³). Hur stor nyttolast kan ballongen lyfta? (Luftens densitet = 1,29 kg/m³)</li>
+            <li>Förklara varför ett helt stålfartyg kan flyta trots att stål har mycket högre densitet än vatten.</li>
+            <li>En U-formad behållare innehåller vatten och olja (densitet 800 kg/m³). Oljan bildar ett 10 cm högt skikt. Hur mycket högre står vattenytan på andra sidan om oljan? Behållaren har konstant tvärsnittsarea.</li>
+          </ol>
+        </div>
+        
+        <div class="facit">
+          <button class="facit-toggle">Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li>$F = 1000 \cdot 0,005 \cdot 9,82 = 49,1$ N</li>
+              <li>$m = 7870 \cdot 0,001 = 7,87$ kg</li>
+              <li>$F = 1000 \cdot 0,003 \cdot 9,82 = 29,46$ N</li>
+              <li>$\rho = 2/0,004 = 500$ kg/m³ &lt; 1000 → Ja, den flyter</li>
+              <li>$\rho = 3,5/0,0005 = 7000$ kg/m³</li>
+              <li>Djup = 0,12 m (12 cm)</li>
+              <li>$V_{\text{ovan}} \approx 0,57$ m³</li>
+              <li>$V = (50-32)/(1000 \cdot 9,82) \approx 0,00183$ m³</li>
+              <li>$\rho = 600$ kg/m³</li>
+              <li>$V \approx 6,25$ m³</li>
+              <li>$a \approx 22,4$ m/s² uppåt</li>
+              <li>$m_{\text{metall}} \approx 0,57$ kg</li>
+              <li>Nyttolast ≈ 111 kg</li>
+              <li>Fartygets totala densitet (stål + luft inne i skrovet) är mindre än vattnets densitet.</li>
+              <li>Höjdskillnad = 2 cm</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      
+      <nav class="lesson-nav">
+        <a href="01-varmelara.html" class="nav-btn">← Föregående</a>
+        <a href="12-tryck-hydraulik.html" class="nav-btn">Nästa →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

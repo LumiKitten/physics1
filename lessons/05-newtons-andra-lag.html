@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newtons Andra Lag (System) - Fysik Bas A</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="settings-panel">
+    <button class="settings-btn theme-toggle" onclick="toggleTheme()" title="Byt tema">☀️</button>
+    <button class="settings-btn focus-toggle" onclick="toggleFocus()" title="Fokusläge">🎯</button>
+    <button class="settings-btn font-toggle" onclick="toggleFont()" title="OpenDyslexic">Aa</button>
+  </div>
+  
+  <a href="../index.html" class="back-link">← Tillbaka till översikten</a>
+  
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 2</span>
+        <h1 class="lesson-title">Newtons Andra Lag (System)</h1>
+      </header>
+      
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Analysera system med flera sammankopplade objekt</li>
+          <li>Beräkna gemensam acceleration för ett system</li>
+          <li>Bestämma spännkrafter i rep och snören</li>
+        </ul>
+      </div>
+      
+      <section class="section">
+        <h2 class="section-title">System av objekt</h2>
+        
+        <p>När objekt är sammankopplade (t.ex. med rep) rör de sig med samma acceleration. Analysera först hela systemet, sedan enskilda delar.</p>
+        
+        <div class="formula-box">
+          $$F_{\text{res}} = m_{\text{total}} \cdot a$$
+          <p>Resulterande kraft = total massa × acceleration</p>
+        </div>
+        
+        <div class="info-box tip">
+          <h4>💡 Strategisk nyckel</h4>
+          <p><strong>Steg 1:</strong> Analysera hela systemet för att hitta accelerationen.<br>
+          <strong>Steg 2:</strong> Frilägg delar för att hitta interna krafter (spännkraft).</p>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2 class="section-title">Lösningsmall</h2>
+        
+        <div class="solution-template">
+          <ol>
+            <li>Rita friläggningsdiagram för hela systemet</li>
+            <li>Beräkna nettokraften som driver systemet</li>
+            <li>Använd $a = F_{\text{res}} / m_{\text{total}}$</li>
+            <li>Frilägg enskilda objekt för att hitta spännkrafter</li>
+          </ol>
+        </div>
+        
+        <div class="example">
+          <div class="example-header">📝 Exempeluppgift</div>
+          <p>Tre lådor (10 kg, 20 kg, 30 kg) dras med 120 N i rad på friktionsfritt golv. Beräkna acceleration och spännkraft mellan 20 kg och 30 kg lådorna.</p>
+          <div class="example-steps">
+            <div class="example-step">
+              <strong>Hela systemet:</strong><br>
+              $a = \frac{F}{m_{\text{tot}}} = \frac{120}{60} = 2$ m/s²
+            </div>
+            <div class="example-step">
+              <strong>Spännkraft vid punkt A (mellan 20 och 30 kg):</strong><br>
+              Kraft som accelererar 20+30 kg bakåt:<br>
+              $F_A = (20 + 30) \cdot 2 = 100$ N
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E - Grundläggande</span>
+          <ol class="exercise-list">
+            <li>Två lådor (5 kg och 10 kg) kopplas ihop och dras med 30 N på friktionsfritt underlag. Beräkna accelerationen.</li>
+            <li>En vagn (3 kg) drar en annan vagn (2 kg). Kraften på första vagnen är 25 N. Beräkna accelerationen.</li>
+            <li>Tre massor (2 kg, 3 kg, 5 kg) hänger i rad i ett rep. Beräkna spännkraften mellan 3 kg och 5 kg.</li>
+            <li>Ett lok (1000 kg) drar en vagn (500 kg) med kraften 3000 N. Beräkna accelerationen.</li>
+            <li>Två lådor dras med 80 N och accelererar med 4 m/s². Vad är den totala massan?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C - Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>En bil (1200 kg) bogserar en husvagn (800 kg) med friktionskraften 500 N på husvagnen. Bilen driver med 3500 N. Beräkna acceleration och dragkraft i kopplingen.</li>
+            <li>Två lådor (15 kg ovanpå 25 kg) dras med 60 N. Friktionskoefficienten mellan golv och undre låda är 0,1. Beräkna accelerationen.</li>
+            <li>En Atwoodmaskin har massorna 4 kg och 6 kg. Beräkna accelerationen och spännkraften i repet.</li>
+            <li>Tre bilar (1000 kg vardera) bogseras med 6000 N. Friktionen är 200 N per bil. Beräkna spännkraften i kopplingen mellan andra och tredje bilen.</li>
+            <li>En hiss (500 kg) med passagerare (300 kg) accelererar uppåt med 2 m/s². Beräkna spännkraften i kabeln.</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A - Avancerad</span>
+          <ol class="exercise-list" start="11">
+            <li>Massa A (5 kg) ligger på ett bord och är kopplad via en remskiva till massa B (3 kg) som hänger fritt. Friktionen är 10 N. Beräkna accelerationen och spännkraften.</li>
+            <li>System: 2 kg hänger över kant, 3 kg ligger på bordet med μ = 0,2. Beräkna accelerationen.</li>
+            <li>En raket (massa 2000 kg) stöter ut gas med hastighet 3000 m/s. Hur mycket gas per sekund behövs för att lyfta?</li>
+            <li>Förklara skillnaden mellan interna och externa krafter i ett system och varför bara externa krafter påverkar systemets acceleration.</li>
+            <li>Tre massor (m₁, m₂, m₃) är kopplade över två remskivor. m₁ = 2 kg ligger på bord (μ = 0,1), m₂ = 3 kg och m₃ = 4 kg hänger på var sin sida. Beräkna accelerationen.</li>
+          </ol>
+        </div>
+        
+        <div class="facit">
+          <button class="facit-toggle">Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li>2 m/s²</li>
+              <li>5 m/s²</li>
+              <li>49,1 N</li>
+              <li>2 m/s²</li>
+              <li>20 kg</li>
+              <li>a = 1,5 m/s², F = 1700 N</li>
+              <li>a ≈ 0,52 m/s²</li>
+              <li>a = 1,96 m/s², T = 47,1 N</li>
+              <li>1067 N</li>
+              <li>9456 N</li>
+              <li>a ≈ 2,45 m/s², T ≈ 22,4 N</li>
+              <li>a ≈ 2,75 m/s²</li>
+              <li>≈ 6,5 kg/s</li>
+              <li>Interna krafter (som spännkraft) tar ut varandra i par (Newtons tredje lag). Endast externa krafter kan ändra systemets totala rörelsemängd.</li>
+              <li>a ≈ 0,88 m/s²</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      
+      <nav class="lesson-nav">
+        <a href="10-newton-enkel.html" class="nav-btn">← Föregående</a>
+        <a href="11-lutande-plan.html" class="nav-btn">Nästa →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

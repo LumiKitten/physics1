@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Värmelära - Fysik Bas A</title>
+  <meta name="description" content="Lär dig värmelära och termodynamik. Formler för värmeenergi Q=mcΔT och värmeutbyte.">
+  
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  
+  <div class="settings-panel">
+    <button class="settings-btn theme-toggle" onclick="toggleTheme()" title="Byt tema">☀️</button>
+    <button class="settings-btn focus-toggle" onclick="toggleFocus()" title="Fokusläge">🎯</button>
+    <button class="settings-btn font-toggle" onclick="toggleFont()" title="OpenDyslexic">Aa</button>
+  </div>
+  
+  <a href="../index.html" class="back-link">← Tillbaka till översikten</a>
+  
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 10</span>
+        <h1 class="lesson-title">Värmelära</h1>
+      </header>
+      
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Förstå begreppet specifik värmekapacitet</li>
+          <li>Kunna tillämpa formeln $Q = mc\Delta T$</li>
+          <li>Lösa problem om värmeutbyte mellan ämnen</li>
+          <li>Beräkna sluttemperatur vid blandning</li>
+        </ul>
+      </div>
+      
+      <section class="section">
+        <h2 class="section-title">Grundläggande begrepp</h2>
+        
+        <p>Värmelära handlar om hur värmeenergi överförs mellan föremål. När två föremål med olika temperaturer kommer i kontakt kommer värme att flöda från det varma till det kalla tills de når samma temperatur.</p>
+        
+        <div class="formula-box">
+          $$Q = m \cdot c \cdot \Delta T$$
+          <p>Värmeenergi = massa × specifik värmekapacitet × temperaturförändring</p>
+        </div>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Symbol</th>
+                <th>Storhet</th>
+                <th>Enhet</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>$Q$</td>
+                <td>Värmeenergi</td>
+                <td>J (Joule)</td>
+              </tr>
+              <tr>
+                <td>$m$</td>
+                <td>Massa</td>
+                <td>kg</td>
+              </tr>
+              <tr>
+                <td>$c$</td>
+                <td>Specifik värmekapacitet</td>
+                <td>J/(kg·°C)</td>
+              </tr>
+              <tr>
+                <td>$\Delta T$</td>
+                <td>Temperaturförändring</td>
+                <td>°C eller K</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="info-box tip">
+          <h4>💡 Strategisk nyckel</h4>
+          <p>Vid värmeutbyte är <strong>avgiven energi alltid lika med upptagen energi</strong>. Ställ upp $Q_{\text{avgiven}} = Q_{\text{upptagen}}$ och lös ekvationen.</p>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2 class="section-title">Vanliga värden</h2>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Ämne</th>
+                <th>Specifik värmekapacitet (J/(kg·°C))</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Vatten</td><td>4 180</td></tr>
+              <tr><td>Is</td><td>2 100</td></tr>
+              <tr><td>Koppar</td><td>390</td></tr>
+              <tr><td>Järn</td><td>450</td></tr>
+              <tr><td>Aluminium</td><td>900</td></tr>
+              <tr><td>Luft</td><td>1 000</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2 class="section-title">Lösningsmall</h2>
+        
+        <div class="solution-template">
+          <h4>Steg för värmeutbytesproblem:</h4>
+          <ol>
+            <li><strong>Identifiera</strong> givna värden för båda ämnena (massa, specifik värmekapacitet, temperaturer)</li>
+            <li><strong>Ställ upp</strong> energiprincipen: $Q_{\text{avgiven}} = Q_{\text{upptagen}}$</li>
+            <li><strong>Formulera</strong> ekvationen med kända värden</li>
+            <li><strong>Lös ut</strong> den okända temperaturen eller massan</li>
+          </ol>
+        </div>
+        
+        <div class="example">
+          <div class="example-header">📝 Exempeluppgift</div>
+          <p>Ett gjutstycke av koppar (0,5 kg, 200°C) läggs i 2 kg olja (20°C, c = 2 000 J/(kg·°C)). Beräkna sluttemperaturen.</p>
+          
+          <div class="example-steps">
+            <div class="example-step">
+              <strong>Steg 1:</strong> Givna värden<br>
+              Koppar: $m_1 = 0,5$ kg, $c_1 = 390$ J/(kg·°C), $T_1 = 200$°C<br>
+              Olja: $m_2 = 2$ kg, $c_2 = 2000$ J/(kg·°C), $T_2 = 20$°C
+            </div>
+            <div class="example-step">
+              <strong>Steg 2:</strong> Energiprincipen<br>
+              $$m_1 c_1 (T_1 - T_{\text{slut}}) = m_2 c_2 (T_{\text{slut}} - T_2)$$
+            </div>
+            <div class="example-step">
+              <strong>Steg 3:</strong> Sätt in värden<br>
+              $$0,5 \cdot 390 \cdot (200 - T_s) = 2 \cdot 2000 \cdot (T_s - 20)$$
+              $$195(200 - T_s) = 4000(T_s - 20)$$
+            </div>
+            <div class="example-step">
+              <strong>Steg 4:</strong> Lös ut $T_s$<br>
+              $$39000 - 195T_s = 4000T_s - 80000$$
+              $$119000 = 4195T_s$$
+              $$T_s \approx 28,4°C$$
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E - Grundläggande</span>
+          <ol class="exercise-list">
+            <li>Hur mycket energi krävs för att värma 0,5 kg vatten från 20°C till 80°C?</li>
+            <li>Ett aluminiumblock (2 kg) kyls från 100°C till 25°C. Hur mycket värme avges?</li>
+            <li>500 g koppar värms med 5 000 J. Hur mycket ökar temperaturen?</li>
+            <li>Hur mycket vatten kan värmas från 15°C till 35°C med 42 000 J?</li>
+            <li>Ett järnföremål (1,5 kg) avger 13 500 J när det kyls 20°C. Bekräfta att detta stämmer med tabellvärdet.</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C - Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>En kopparbehållare (0,3 kg) innehåller 1,2 kg vatten vid 20°C. Hur mycket energi krävs för att värma allt till 60°C?</li>
+            <li>Ett järnstycke (0,8 kg, 300°C) läggs i 1,5 kg vatten (18°C). Beräkna sluttemperaturen.</li>
+            <li>1 kg is (-10°C) ska värmas till 0°C. Hur mycket energi behövs?</li>
+            <li>En aluminiumpanna (0,4 kg) med 0,8 kg vatten värms från 20°C till 90°C. Hur mycket energi förbrukas totalt?</li>
+            <li>Två lika stora mängder vatten (50°C respektive 10°C) blandas. Vad blir sluttemperaturen?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A - Avancerad</span>
+          <ol class="exercise-list" start="11">
+            <li>Ett kopparlod (0,2 kg, 400°C) läggs i en isolerad behållare med 0,5 kg vatten och 0,15 kg aluminium (båda vid 18°C). Beräkna sluttemperaturen.</li>
+            <li>En okänd metallbit (0,3 kg, 95°C) läggs i 0,5 kg vatten (20°C). Sluttemperaturen blir 23°C. Bestäm metallens specifika värmekapacitet.</li>
+            <li>Hur stor massa koppar (100°C) behövs för att höja temperaturen på 0,8 kg vatten från 15°C till 25°C?</li>
+            <li>I en serie experiment blandas olika mängder varmt och kallt vatten. Förklara varför sluttemperaturen inte alltid är medelvärdet av starttemperaturerna.</li>
+            <li>Ett system består av 0,5 kg vatten (80°C) och 0,3 kg olja (c = 2 000 J/(kg·°C), 20°C). Beräkna sluttemperaturen och energiöverföringen.</li>
+          </ol>
+        </div>
+        
+        <div class="facit">
+          <button class="facit-toggle">Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li>$Q = 0,5 \cdot 4180 \cdot 60 = 125\,400$ J ≈ 125 kJ</li>
+              <li>$Q = 2 \cdot 900 \cdot 75 = 135\,000$ J = 135 kJ</li>
+              <li>$\Delta T = 5000 / (0,5 \cdot 390) \approx 25,6$°C</li>
+              <li>$m = 42000 / (4180 \cdot 20) \approx 0,50$ kg</li>
+              <li>$Q = 1,5 \cdot 450 \cdot 20 = 13\,500$ J ✓</li>
+              <li>$Q = 0,3 \cdot 390 \cdot 40 + 1,2 \cdot 4180 \cdot 40 \approx 205\,000$ J ≈ 205 kJ</li>
+              <li>$T_s \approx 31,5$°C</li>
+              <li>$Q = 1 \cdot 2100 \cdot 10 = 21\,000$ J = 21 kJ</li>
+              <li>$Q = 0,4 \cdot 900 \cdot 70 + 0,8 \cdot 4180 \cdot 70 \approx 259\,000$ J</li>
+              <li>$T_s = 30$°C (medelvärdet när massorna är lika)</li>
+              <li>$T_s \approx 26,4$°C</li>
+              <li>$c \approx 500$ J/(kg·°C)</li>
+              <li>$m \approx 1,14$ kg koppar</li>
+              <li>Sluttemperaturen beror på massornas förhållande. Mer massa av ett ämne "drar" temperaturen åt sitt håll.</li>
+              <li>$T_s \approx 60,4$°C, överförd energi ≈ 24,2 kJ</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      
+      <nav class="lesson-nav">
+        <a href="09-impuls.html" class="nav-btn">← Föregående</a>
+        <a href="02-arkimedes.html" class="nav-btn">Nästa →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

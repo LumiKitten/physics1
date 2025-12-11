@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energiprincipen - Fysik Bas A</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="settings-panel">
+    <button class="settings-btn theme-toggle" onclick="toggleTheme()" title="Byt tema">☀️</button>
+    <button class="settings-btn focus-toggle" onclick="toggleFocus()" title="Fokusläge">🎯</button>
+    <button class="settings-btn font-toggle" onclick="toggleFont()" title="OpenDyslexic">Aa</button>
+  </div>
+  
+  <a href="../index.html" class="back-link">← Tillbaka till översikten</a>
+  
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 6</span>
+        <h1 class="lesson-title">Energiprincipen</h1>
+      </header>
+      
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Förstå bevarande av mekanisk energi</li>
+          <li>Beräkna kinetisk och potentiell energi</li>
+          <li>Tillämpa energiprincipen på höjd- och hastighetsförändringar</li>
+        </ul>
+      </div>
+      
+      <section class="section">
+        <h2 class="section-title">Mekanisk energi</h2>
+        
+        <div class="formula-box">
+          $$E_k = \frac{1}{2}mv^2$$
+          <p>Kinetisk energi (rörelseenergi)</p>
+        </div>
+        
+        <div class="formula-box">
+          $$E_p = mgh$$
+          <p>Potentiell energi (lägesenergi)</p>
+        </div>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr><th>Symbol</th><th>Storhet</th><th>Enhet</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>$E_k$</td><td>Kinetisk energi</td><td>J</td></tr>
+              <tr><td>$E_p$</td><td>Potentiell energi</td><td>J</td></tr>
+              <tr><td>$m$</td><td>Massa</td><td>kg</td></tr>
+              <tr><td>$v$</td><td>Hastighet</td><td>m/s</td></tr>
+              <tr><td>$h$</td><td>Höjd</td><td>m</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2 class="section-title">Energins bevarande</h2>
+        
+        <div class="formula-box">
+          $$E_{\text{före}} = E_{\text{efter}}$$
+          $$\frac{1}{2}mv_1^2 + mgh_1 = \frac{1}{2}mv_2^2 + mgh_2$$
+        </div>
+        
+        <div class="info-box tip">
+          <h4>💡 Strategisk nyckel</h4>
+          <p>När inga yttre krafter (som friktion) utför arbete, bevaras mekanisk energi. <strong>Energiprincipen är ofta snabbare än kinematik!</strong></p>
+        </div>
+        
+        <div class="formula-box">
+          $$v_{\text{slut}} = \sqrt{2gh}$$
+          <p>Sluthastighet vid fritt fall från höjd h (startar från vila)</p>
+        </div>
+        
+        <div class="example">
+          <div class="example-header">📝 Exempeluppgift</div>
+          <p>En boll (0,5 kg) släpps från 10 m höjd. Beräkna hastigheten precis före marken.</p>
+          <div class="example-steps">
+            <div class="example-step">
+              $E_p = E_k$<br>
+              $mgh = \frac{1}{2}mv^2$<br>
+              $v = \sqrt{2gh} = \sqrt{2 \cdot 9,82 \cdot 10} = 14,0$ m/s
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E - Grundläggande</span>
+          <ol class="exercise-list">
+            <li>Beräkna kinetisk energi för en bil (1200 kg) som kör 25 m/s.</li>
+            <li>En sten (2 kg) släpps från 5 m höjd. Beräkna hastigheten vid marken.</li>
+            <li>Beräkna potentiell energi för en bok (0,5 kg) på en hylla 2 m ovan golvet.</li>
+            <li>En boll kastas uppåt med 15 m/s. Hur högt når den?</li>
+            <li>En vagn (10 kg) rullar med 4 m/s. Hur hög backe kan den rulla upp?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C - Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>En berg-och-dalbana startar från vila på 30 m höjd. Hur stor är hastigheten vid 10 m höjd?</li>
+            <li>En pendel (1 kg) släpps från 0,5 m ovan lägsta punkten. Beräkna hastigheten i lägsta punkten.</li>
+            <li>En skidåkare (70 kg) åker från 100 m höjd och har 20 m/s vid starten. Beräkna hastigheten vid dalen (h = 0).</li>
+            <li>En kula (0,1 kg) avfyras rakt upp med 200 m/s. Hur högt når den? (bortse från luftmotstånd)</li>
+            <li>En boll rullar nedför en lutande bana från 3 m höjd. Längst ned träffar den en fjäder. Hur långt komprimeras fjädern (k = 500 N/m) om bollen är 0,2 kg?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A - Avancerad</span>
+          <ol class="exercise-list" start="11">
+            <li>En looping har radien 2 m. Från vilken minsta höjd måste en vagn starta för att klara loopen?</li>
+            <li>En pendel (0,5 kg) släpps från 60° vinkel (snörlängd 1 m). Beräkna hastigheten i lägsta punkten.</li>
+            <li>En boll (0,3 kg) kastas snett uppåt med 20 m/s i 45° vinkel. Beräkna hastigheten vid högsta punkten.</li>
+            <li>Förklara varför en berg-och-dalbana aldrig kan nå högre än startpunkten utan extra energitillförsel.</li>
+            <li>En vagn (5 kg) startar med 8 m/s på en bana med friktion. Den stannar efter att ha stigit 2 m i höjd. Hur mycket energi förlorades till friktion?</li>
+          </ol>
+        </div>
+        
+        <div class="facit">
+          <button class="facit-toggle">Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li>375 000 J = 375 kJ</li>
+              <li>9,9 m/s</li>
+              <li>9,82 J</li>
+              <li>11,5 m</li>
+              <li>0,81 m</li>
+              <li>19,8 m/s</li>
+              <li>3,13 m/s</li>
+              <li>48,8 m/s</li>
+              <li>2039 m ≈ 2 km</li>
+              <li>0,15 m = 15 cm</li>
+              <li>5 m (= 2,5 × radie)</li>
+              <li>3,13 m/s</li>
+              <li>14,1 m/s (endast horisontell komponent kvar)</li>
+              <li>Energi kan omvandlas men inte skapas. Utan tillförd energi kan den mekaniska energin aldrig överskrida startvärdet.</li>
+              <li>ΔE = 62 J</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      
+      <nav class="lesson-nav">
+        <a href="04-moment.html" class="nav-btn">← Föregående</a>
+        <a href="08-arbete-energi.html" class="nav-btn">Nästa →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

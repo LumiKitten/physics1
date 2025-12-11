@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momentlagen - Fysik Bas A</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="settings-panel">
+    <button class="settings-btn theme-toggle" onclick="toggleTheme()" title="Byt tema">☀️</button>
+    <button class="settings-btn focus-toggle" onclick="toggleFocus()" title="Fokusläge">🎯</button>
+    <button class="settings-btn font-toggle" onclick="toggleFont()" title="OpenDyslexic">Aa</button>
+  </div>
+  
+  <a href="../index.html" class="back-link">← Tillbaka till översikten</a>
+  
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 5</span>
+        <h1 class="lesson-title">Momentlagen & Hävstänger</h1>
+      </header>
+      
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Förstå begreppet vridmoment</li>
+          <li>Tillämpa momentlagen vid jämvikt</li>
+          <li>Beräkna okända krafter och hävarmar</li>
+        </ul>
+      </div>
+      
+      <section class="section">
+        <h2 class="section-title">Vridmoment</h2>
+        
+        <p>Vridmoment (moment) beskriver en krafts vridande verkan kring en punkt. Moment beror på både kraftens storlek och avståndet till vridpunkten.</p>
+        
+        <div class="formula-box">
+          $$M = F \cdot l$$
+          <p>Moment = kraft × hävarm</p>
+        </div>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr><th>Symbol</th><th>Storhet</th><th>Enhet</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>$M$</td><td>Moment</td><td>Nm (newtonmeter)</td></tr>
+              <tr><td>$F$</td><td>Kraft</td><td>N</td></tr>
+              <tr><td>$l$</td><td>Hävarm</td><td>m</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2 class="section-title">Jämviktsvillkor</h2>
+        
+        <div class="formula-box">
+          $$\sum M = 0$$
+          $$M_{\text{medurs}} = M_{\text{moturs}}$$
+        </div>
+        
+        <div class="info-box tip">
+          <h4>💡 Strategisk nyckel</h4>
+          <p><strong>Välj vridpunkten smart!</strong> Placera den där en okänd kraft verkar så elimineras den kraften från ekvationen.</p>
+        </div>
+        
+        <div class="example">
+          <div class="example-header">📝 Exempeluppgift</div>
+          <p>En balk (4 m) vilar på ett stöd 1 m från vänstra änden. I vänstra änden hänger 200 N, i högra änden hänger en okänd kraft F. Beräkna F för jämvikt.</p>
+          <div class="example-steps">
+            <div class="example-step">
+              Vridpunkt vid stödet (eliminerar stödets kraft)<br>
+              $M_{\text{moturs}} = M_{\text{medurs}}$<br>
+              $200 \cdot 1 = F \cdot 3$<br>
+              $F = 66,7$ N
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E - Grundläggande</span>
+          <ol class="exercise-list">
+            <li>Beräkna momentet av en kraft på 50 N med hävarmen 0,8 m.</li>
+            <li>En gungbräda är 4 m lång med stöd i mitten. Ett barn (300 N) sitter 2 m från mitten. Hur stor kraft behövs 1 m från mitten på andra sidan?</li>
+            <li>En kraft på 100 N ger momentet 30 Nm. Hur lång är hävarmen?</li>
+            <li>Två krafter, 40 N och 60 N, verkar på en balk. Den ena har hävarmen 1,5 m. Hur lång hävarm behöver den andra för jämvikt?</li>
+            <li>En nyckel (25 cm) används för att dra åt en bult med 20 N. Beräkna momentet.</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C - Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>En balk (6 m, 100 N) vilar på två stöd vid ändarna. En last på 400 N placeras 2 m från vänstra stödet. Beräkna stödkrafterna.</li>
+            <li>En skottkärra har last 200 N placerad 0,4 m från hjulet. Handtagen är 1,2 m från hjulet. Hur stor kraft krävs för att lyfta?</li>
+            <li>En bräda (3 m, 60 N) ligger på ett stöd 1 m från ena änden. Var ska en 90 N tung last placeras för jämvikt?</li>
+            <li>En dörr (80 N) hänger på gångjärn 5 cm från kanten. Dörrhandtaget är 60 cm från gångjärnet. Vilken kraft behövs för att hålla dörren horisontellt?</li>
+            <li>En person (600 N) går på en bräda (4 m) som ligger på två stöd vid ändarna. När personen är 1 m från vänstra änden, beräkna båda stödkrafterna.</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A - Avancerad</span>
+          <ol class="exercise-list" start="11">
+            <li>En L-formad arm har en vertikal del (0,5 m) och en horisontell del (0,8 m). En kraft på 100 N verkar horisontellt på den vertikala delens topp. Beräkna momentet kring fästpunkten.</li>
+            <li>En stege (5 m, 150 N) lutar mot en vägg med 60° vinkel. Beräkna normalkraften från väggen om stegen har jämn massfördelning.</li>
+            <li>En balk (4 m) vilar på ett stöd 1 m från vänstra änden. Balken väger 200 N. Hur stor last kan hängas i högra änden innan balken tippar?</li>
+            <li>Förklara varför det är lättare att öppna en dörr genom att trycka vid handtaget än nära gångjärnet.</li>
+            <li>Tre krafter (F₁ = 20 N, F₂ = 30 N, F₃ = ?) verkar på en balk. F₁ har hävarmen 1 m, F₂ har hävarmen 0,5 m (moturs), F₃ har hävarmen 2 m. Bestäm F₃ för jämvikt.</li>
+          </ol>
+        </div>
+        
+        <div class="facit">
+          <button class="facit-toggle">Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li>40 Nm</li>
+              <li>600 N</li>
+              <li>0,3 m</li>
+              <li>1 m</li>
+              <li>5 Nm</li>
+              <li>V = 316,7 N, H = 183,3 N</li>
+              <li>≈ 66,7 N</li>
+              <li>0,67 m från stödet (mot korta sidan)</li>
+              <li>≈ 6,7 N</li>
+              <li>V = 450 N, H = 150 N</li>
+              <li>50 Nm</li>
+              <li>≈ 43 N</li>
+              <li>66,7 N</li>
+              <li>Större hävarm ger större moment med samma kraft.</li>
+              <li>F₃ = 2,5 N</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      
+      <nav class="lesson-nav">
+        <a href="07-kinematik.html" class="nav-btn">← Föregående</a>
+        <a href="06-energiprincipen.html" class="nav-btn">Nästa →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>
