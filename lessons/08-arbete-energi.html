@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arbete & Energi - Fysik Bas A</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="settings-panel">
+    <button class="settings-btn theme-toggle" onclick="toggleTheme()" title="Byt tema">☀️</button>
+    <button class="settings-btn focus-toggle" onclick="toggleFocus()" title="Fokusläge">🎯</button>
+    <button class="settings-btn font-toggle" onclick="toggleFont()" title="OpenDyslexic">Aa</button>
+  </div>
+  
+  <a href="../index.html" class="back-link">← Tillbaka till översikten</a>
+  
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 7</span>
+        <h1 class="lesson-title">Arbete & Energi</h1>
+      </header>
+      
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Beräkna mekaniskt arbete</li>
+          <li>Tillämpa arbete-energi-satsen</li>
+          <li>Lösa bromsningsproblem med friktion</li>
+        </ul>
+      </div>
+      
+      <section class="section">
+        <h2 class="section-title">Mekaniskt arbete</h2>
+        
+        <div class="formula-box">
+          $$W = F \cdot s$$
+          <p>Arbete = kraft × sträcka (när kraft och rörelse är parallella)</p>
+        </div>
+        
+        <div class="formula-box">
+          $$W = F \cdot s \cdot \cos\theta$$
+          <p>Arbete med vinkel mellan kraft och rörelse</p>
+        </div>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr><th>Symbol</th><th>Storhet</th><th>Enhet</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>$W$</td><td>Arbete</td><td>J (Joule)</td></tr>
+              <tr><td>$F$</td><td>Kraft</td><td>N</td></tr>
+              <tr><td>$s$</td><td>Sträcka</td><td>m</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2 class="section-title">Arbete-energi-satsen</h2>
+        
+        <div class="formula-box">
+          $$W_{\text{netto}} = \Delta E_k = E_{k,\text{slut}} - E_{k,\text{start}}$$
+        </div>
+        
+        <p>För bromsning gäller:</p>
+        <div class="formula-box">
+          $$W_{\text{friktion}} = \Delta E_k$$
+          $$F_f \cdot s = \frac{1}{2}mv^2$$
+        </div>
+        
+        <div class="info-box tip">
+          <h4>💡 Strategisk nyckel</h4>
+          <p>Använd arbete-energi-satsen när en kraft verkar över en sträcka för att ändra ett objekts hastighet. Perfekt för <strong>bromssträcka</strong>!</p>
+        </div>
+        
+        <div class="formula-box">
+          $$s = \frac{v^2}{2\mu g}$$
+          <p>Bromssträcka (från v till vila)</p>
+        </div>
+        
+        <div class="example">
+          <div class="example-header">📝 Exempeluppgift</div>
+          <p>En bil (1000 kg) kör 20 m/s och bromsar. Friktionskoefficienten är 0,7. Beräkna bromssträckan.</p>
+          <div class="example-steps">
+            <div class="example-step">
+              $F_f = \mu mg = 0,7 \cdot 1000 \cdot 9,82 = 6874$ N<br>
+              $W = \Delta E_k \Rightarrow F_f \cdot s = \frac{1}{2}mv^2$<br>
+              $s = \frac{0,5 \cdot 1000 \cdot 20^2}{6874} = 29,1$ m
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E - Grundläggande</span>
+          <ol class="exercise-list">
+            <li>Beräkna arbetet när en kraft på 100 N verkar över 5 m.</li>
+            <li>En låda (20 kg) lyfts 3 m rakt upp. Hur mycket arbete utförs?</li>
+            <li>Ett föremål med kinetisk energi 500 J bromsas till stillastående. Hur stort arbete utför friktionen?</li>
+            <li>En vagn (5 kg) accelereras från vila till 4 m/s. Hur stort arbete utfördes?</li>
+            <li>En kraft på 50 N verkar på en låda som rör sig 10 m. Kraften verkar i 60° vinkel mot rörelseriktningen. Beräkna arbetet.</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C - Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>En bil (1200 kg) kör 25 m/s. Friktionskoefficienten är 0,8. Beräkna bromssträckan.</li>
+            <li>En cyklist (80 kg totalt) rullar i 10 m/s. Hur långt rullar cykeln innan den stannar om friktionskraften är 40 N?</li>
+            <li>En låda (15 kg) dras 8 m över ett golv med konstant hastighet. Dragkraften är 45 N. Hur stort arbete utför friktionen?</li>
+            <li>En bil accelererar från 10 m/s till 20 m/s över 100 m. Bilens massa är 1500 kg. Beräkna nettokraften.</li>
+            <li>En sten (2 kg) kastas uppåt med 15 m/s. Använd arbete-energi-satsen för att beräkna höjden.</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A - Avancerad</span>
+          <ol class="exercise-list" start="11">
+            <li>En bil (1000 kg) med hastigheten 30 m/s bromsar på våt väg (μ = 0,4) i en nedförsbacke (5°). Beräkna bromssträckan.</li>
+            <li>En vagn (10 kg) startar med 8 m/s och rullar uppför en backe (höjd 2 m). Friktion gör att den stannar precis vid toppen. Hur stor var friktionskraften?</li>
+            <li>En lastbil (10 000 kg) kör i 90 km/h. Jämför bromssträckorna med μ = 0,7 (torr väg) och μ = 0,3 (våt väg).</li>
+            <li>Förklara varför bromssträckan fyrdubblas om hastigheten fördubblas.</li>
+            <li>En kula (0,5 kg) skjuts med en fjäder (k = 200 N/m) som komprimeras 0,1 m. Hur hög hastighet får kulan?</li>
+          </ol>
+        </div>
+        
+        <div class="facit">
+          <button class="facit-toggle">Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li>500 J</li>
+              <li>589,2 J</li>
+              <li>-500 J (negativt arbete)</li>
+              <li>40 J</li>
+              <li>250 J</li>
+              <li>39,8 m</li>
+              <li>100 m</li>
+              <li>-360 J</li>
+              <li>2250 N</li>
+              <li>11,5 m</li>
+              <li>≈ 127 m</li>
+              <li>≈ 14,8 N</li>
+              <li>Torr: 45,4 m, Våt: 106 m</li>
+              <li>$E_k \propto v^2$, så dubbel hastighet ger fyrdubbel energi att bromsa bort.</li>
+              <li>2 m/s</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      
+      <nav class="lesson-nav">
+        <a href="06-energiprincipen.html" class="nav-btn">← Föregående</a>
+        <a href="03-stotar.html" class="nav-btn">Nästa →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

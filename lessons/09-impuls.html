@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impuls & Medelkraft - Fysik Bas A</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="settings-panel">
+    <button class="settings-btn theme-toggle" onclick="toggleTheme()" title="Byt tema">☀️</button>
+    <button class="settings-btn focus-toggle" onclick="toggleFocus()" title="Fokusläge">🎯</button>
+    <button class="settings-btn font-toggle" onclick="toggleFont()" title="OpenDyslexic">Aa</button>
+  </div>
+  
+  <a href="../index.html" class="back-link">← Tillbaka till översikten</a>
+  
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 9</span>
+        <h1 class="lesson-title">Impuls & Medelkraft</h1>
+      </header>
+      
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Förstå sambandet mellan impuls och rörelsemängd</li>
+          <li>Beräkna impuls vid stötar</li>
+          <li>Bestämma medelkraft under kort kontakttid</li>
+        </ul>
+      </div>
+      
+      <section class="section">
+        <h2 class="section-title">Impuls</h2>
+        
+        <p>Impuls är förändringen i rörelsemängd. Den kan beräknas från hastighetsförändring eller från kraft och tid.</p>
+        
+        <div class="formula-box">
+          $$I = \Delta p = p_{\text{efter}} - p_{\text{före}}$$
+          $$I = m(v_{\text{efter}} - v_{\text{före}})$$
+        </div>
+        
+        <div class="formula-box">
+          $$I = F_{\text{medel}} \cdot \Delta t$$
+          <p>Impuls = medelkraft × kontakttid</p>
+        </div>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr><th>Symbol</th><th>Storhet</th><th>Enhet</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>$I$</td><td>Impuls</td><td>Ns = kg·m/s</td></tr>
+              <tr><td>$\Delta p$</td><td>Rörelsemängdsförändring</td><td>kg·m/s</td></tr>
+              <tr><td>$F_{\text{medel}}$</td><td>Medelkraft</td><td>N</td></tr>
+              <tr><td>$\Delta t$</td><td>Kontakttid</td><td>s</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="info-box tip">
+          <h4>💡 Strategisk nyckel</h4>
+          <p>Kom ihåg att <strong>definiera positiv riktning</strong> eftersom hastighet är en vektor. Vid studs byter hastigheten tecken!</p>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2 class="section-title">Studsande objekt</h2>
+        
+        <div class="info-box">
+          <h4>⚠️ Viktigt vid studs</h4>
+          <p>Om ett objekt studsar tillbaka måste du ta hänsyn till att hastigheten byter riktning:</p>
+          <p>$\Delta v = v_{\text{efter}} - v_{\text{före}} = (-v) - (+v) = -2v$</p>
+        </div>
+        
+        <div class="example">
+          <div class="example-header">📝 Exempeluppgift</div>
+          <p>En boll (0,2 kg) träffar en vägg med 15 m/s och studsar tillbaka med samma fart. Kontakttiden är 10 ms. Beräkna impulsen och medelkraften.</p>
+          <div class="example-steps">
+            <div class="example-step">
+              <strong>Impuls:</strong><br>
+              $I = m(v_{\text{efter}} - v_{\text{före}}) = 0,2 \cdot ((-15) - 15) = -6$ Ns<br>
+              Beloppet är 6 Ns.
+            </div>
+            <div class="example-step">
+              <strong>Medelkraft:</strong><br>
+              $F = \frac{I}{\Delta t} = \frac{6}{0,010} = 600$ N
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E - Grundläggande</span>
+          <ol class="exercise-list">
+            <li>Beräkna impulsen på ett föremål (3 kg) som accelereras från vila till 8 m/s.</li>
+            <li>En kraft på 200 N verkar i 0,5 s. Hur stor impuls ger kraften?</li>
+            <li>En boll (0,4 kg) stannar efter att ha träffat en vägg med 10 m/s. Beräkna impulsen.</li>
+            <li>En impuls på 50 Ns verkar på ett föremål (10 kg) i vila. Vilken hastighet får föremålet?</li>
+            <li>En fotboll (0,45 kg) sparkas från vila till 25 m/s. Kontakttiden är 20 ms. Beräkna medelkraften.</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C - Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>En tennisboll (60 g) träffar en racket med 30 m/s och lämnar med 40 m/s i motsatt riktning. Beräkna impulsen.</li>
+            <li>En bil (1200 kg) krockar och stannar från 20 m/s på 0,1 s. Beräkna medelkraften.</li>
+            <li>En golfboll (45 g) träffas så att den accelererar till 70 m/s. Kontakttiden är 0,5 ms. Beräkna medelkraften.</li>
+            <li>En person (70 kg) hoppar ner från 2 m höjd. Jämför kraften vid landning om personen böjer på knäna (Δt = 0,3 s) vs sträcka ben (Δt = 0,02 s).</li>
+            <li>En vattenstråle (0,5 kg/s) med hastighet 20 m/s träffar en vägg och stannar. Beräkna kraften på väggen.</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A - Avancerad</span>
+          <ol class="exercise-list" start="11">
+            <li>En boll (0,3 kg) faller 5 m och studsar tillbaka till 3 m höjd. Kontakttiden med marken är 5 ms. Beräkna medelkraften.</li>
+            <li>En brandslang spottar ut 600 liter vatten per minut med hastigheten 30 m/s. Hur stor kraft krävs för att hålla slangen?</li>
+            <li>En astronaut (80 kg) kastar ett verktyg (2 kg) med 5 m/s relativt sig själv. Med vilken hastighet rör sig astronauten efteråt?</li>
+            <li>Förklara varför krockkuddar minskar skaderisken vid kollisioner utifrån impuls-kraft-sambandet.</li>
+            <li>En bil (1500 kg) kör i 30 m/s och kolliderar med en annan bil (1000 kg) i 20 m/s (mötande). De fastnar och deformeras under 0,15 s. Beräkna medelkraften på varje bil.</li>
+          </ol>
+        </div>
+        
+        <div class="facit">
+          <button class="facit-toggle">Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li>24 Ns</li>
+              <li>100 Ns</li>
+              <li>-4 Ns (eller 4 Ns i belopp)</li>
+              <li>5 m/s</li>
+              <li>562,5 N</li>
+              <li>4,2 Ns</li>
+              <li>240 000 N = 240 kN</li>
+              <li>6300 N</li>
+              <li>Böjda knän: ≈ 1460 N, Sträckta ben: ≈ 21 900 N</li>
+              <li>10 N</li>
+              <li>≈ 2070 N</li>
+              <li>300 N</li>
+              <li>≈ 0,12 m/s</li>
+              <li>Krockkudden förlänger kontakttiden, vilket minskar medelkraften för samma impuls (hastighetsändring).</li>
+              <li>≈ 166 700 N på vardera</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      
+      <nav class="lesson-nav">
+        <a href="03-stotar.html" class="nav-btn">← Föregående</a>
+        <a href="01-varmelara.html" class="nav-btn">Nästa →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

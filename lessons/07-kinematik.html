@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fritt Fall & Kaströrelse - Fysik Bas A</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="settings-panel">
+    <button class="settings-btn theme-toggle" onclick="toggleTheme()" title="Byt tema">☀️</button>
+    <button class="settings-btn focus-toggle" onclick="toggleFocus()" title="Fokusläge">🎯</button>
+    <button class="settings-btn font-toggle" onclick="toggleFont()" title="OpenDyslexic">Aa</button>
+  </div>
+  
+  <a href="../index.html" class="back-link">← Tillbaka till översikten</a>
+  
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 4</span>
+        <h1 class="lesson-title">Fritt Fall & Kaströrelse</h1>
+      </header>
+      
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Tillämpa kinematikens formler på fritt fall</li>
+          <li>Beräkna falltid, sluthastighet och sträcka</li>
+          <li>Analysera vertikal kaströrelse</li>
+        </ul>
+      </div>
+      
+      <section class="section">
+        <h2 class="section-title">Kinematikens formler</h2>
+        
+        <div class="formula-box">
+          $$s = v_0 t + \frac{1}{2}at^2$$
+          <p>Sträcka vid konstant acceleration</p>
+        </div>
+        
+        <div class="formula-box">
+          $$v = v_0 + at$$
+          <p>Hastighet vid konstant acceleration</p>
+        </div>
+        
+        <div class="formula-box">
+          $$v^2 = v_0^2 + 2as$$
+          <p>Hastighet utan tid</p>
+        </div>
+        
+        <div class="info-box tip">
+          <h4>💡 Strategisk nyckel</h4>
+          <p>Vid fritt fall: $a = g = 9,82$ m/s². <strong>Välj positiv riktning</strong> och var konsekvent med tecken!</p>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2 class="section-title">Teckenkonvention</h2>
+        
+        <div class="info-box">
+          <h4>📍 Om positiv riktning är nedåt:</h4>
+          <p>$g = +9,82$ m/s², fallande föremål har positiv hastighet</p>
+        </div>
+        
+        <div class="info-box">
+          <h4>📍 Om positiv riktning är uppåt:</h4>
+          <p>$g = -9,82$ m/s², uppkastad boll har positiv starthastighet</p>
+        </div>
+        
+        <div class="example">
+          <div class="example-header">📝 Exempeluppgift</div>
+          <p>En sten släpps från 45 m höjd. Beräkna falltiden och sluthastigheten.</p>
+          <div class="example-steps">
+            <div class="example-step">
+              <strong>Falltid:</strong> $s = \frac{1}{2}gt^2$<br>
+              $t = \sqrt{\frac{2s}{g}} = \sqrt{\frac{2 \cdot 45}{9,82}} = 3,03$ s
+            </div>
+            <div class="example-step">
+              <strong>Sluthastighet:</strong> $v = gt = 9,82 \cdot 3,03 = 29,7$ m/s
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E - Grundläggande</span>
+          <ol class="exercise-list">
+            <li>En sten släpps och faller i 2 sekunder. Hur långt faller den?</li>
+            <li>En boll släpps från 20 m höjd. Hur lång tid tar det innan den når marken?</li>
+            <li>Beräkna hastigheten för ett föremål som fallit fritt i 3 sekunder.</li>
+            <li>En boll kastas rakt upp med 10 m/s. Hur hög blir den?</li>
+            <li>Ett föremål kastas rakt upp och når 5 m höjd. Vad var starthastigheten?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C - Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>En boll kastas rakt upp med 25 m/s. a) Hur högt når den? b) Hur lång tid tar det?</li>
+            <li>En sten kastas nedåt med 5 m/s från 80 m höjd. Hur lång tid tar det att nå marken?</li>
+            <li>En boll släpps och passerar ett fönster (2 m högt) på 0,3 s. Från vilken höjd släpptes bollen?</li>
+            <li>Två bollar släpps från samma höjd, den ena 1 s efter den andra. När möts de? (höjd 100 m)</li>
+            <li>En raket skjuts rakt upp och når 500 m på 4 s. Vad var accelerationen under motorbrännandet?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A - Avancerad</span>
+          <ol class="exercise-list" start="11">
+            <li>En boll kastas uppåt så att den tillbringar totalt 4 s i luften. Hur högt når den?</li>
+            <li>En sten kastas rakt upp med 30 m/s. Vid vilka tidpunkter är den på 40 m höjd?</li>
+            <li>Två stenar kastas samtidigt, en uppåt (20 m/s) och en nedåt (10 m/s) från 50 m höjd. Vilken når marken först och med hur mycket försprång?</li>
+            <li>En droppe vatten faller från ett tak. Nästa droppe faller 0,2 s senare. När är avståndet mellan dropparna 1 m?</li>
+            <li>En hiss accelererar uppåt med 2 m/s². En person släpper en boll inne i hissen. Hur ser rörelsen ut från hissen respektive från marken?</li>
+          </ol>
+        </div>
+        
+        <div class="facit">
+          <button class="facit-toggle">Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li>19,64 m</li>
+              <li>2,02 s</li>
+              <li>29,46 m/s</li>
+              <li>5,1 m</li>
+              <li>9,9 m/s</li>
+              <li>a) 31,9 m, b) 2,55 s upp + 2,55 s ner = 5,1 s totalt</li>
+              <li>3,55 s</li>
+              <li>≈ 9,5 m ovanför fönstrets överkant</li>
+              <li>De möts efter ca 4,6 s</li>
+              <li>62,5 m/s² (bortser från g under bränning)</li>
+              <li>19,6 m</li>
+              <li>t ≈ 1,8 s och t ≈ 4,3 s</li>
+              <li>Nedåtkastade stenen landar först, ≈ 0,89 s före</li>
+              <li>≈ 0,61 s efter första droppens fall</li>
+              <li>Från hissen: faller med g+a = 11,82 m/s². Från marken: faller med g = 9,82 m/s².</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      
+      <nav class="lesson-nav">
+        <a href="11-lutande-plan.html" class="nav-btn">← Föregående</a>
+        <a href="04-moment.html" class="nav-btn">Nästa →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

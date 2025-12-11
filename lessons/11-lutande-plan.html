@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lutande Plan - Fysik Bas A</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="settings-panel">
+    <button class="settings-btn theme-toggle" onclick="toggleTheme()" title="Byt tema">☀️</button>
+    <button class="settings-btn focus-toggle" onclick="toggleFocus()" title="Fokusläge">🎯</button>
+    <button class="settings-btn font-toggle" onclick="toggleFont()" title="OpenDyslexic">Aa</button>
+  </div>
+  
+  <a href="../index.html" class="back-link">← Tillbaka till översikten</a>
+  
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 3</span>
+        <h1 class="lesson-title">Lutande Plan</h1>
+      </header>
+      
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Dela upp tyngdkraften i komponenter</li>
+          <li>Beräkna acceleration på lutande plan utan friktion</li>
+          <li>Analysera jämvikt och rörelse på sluttningar</li>
+        </ul>
+      </div>
+      
+      <section class="section">
+        <h2 class="section-title">Kraftuppdelning</h2>
+        
+        <p>På ett lutande plan delas tyngdkraften upp i två komponenter: en parallell med planet och en vinkelrät mot planet.</p>
+        
+        <div class="formula-box">
+          $$F_{\parallel} = mg \sin\theta$$
+          <p>Kraft parallellt nedför planet</p>
+        </div>
+        
+        <div class="formula-box">
+          $$F_{\perp} = mg \cos\theta$$
+          <p>Kraft vinkelrätt mot planet (= normalkraft)</p>
+        </div>
+        
+        <div class="info-box tip">
+          <h4>💡 Strategisk nyckel</h4>
+          <p>Vid <strong>lutande plan utan friktion</strong> accelererar föremålet med:<br>
+          $a = g \sin\theta$<br>
+          Detta är oberoende av massan!</p>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2 class="section-title">Med friktion</h2>
+        
+        <div class="formula-box">
+          $$F_f = \mu \cdot F_N = \mu \cdot mg\cos\theta$$
+          <p>Friktionskraft på lutande plan</p>
+        </div>
+        
+        <div class="formula-box">
+          $$a = g(\sin\theta - \mu\cos\theta)$$
+          <p>Acceleration nedför med friktion</p>
+        </div>
+        
+        <div class="example">
+          <div class="example-header">📝 Exempeluppgift</div>
+          <p>En låda glider nedför ett lutande plan med vinkeln 30°. Beräkna accelerationen utan friktion.</p>
+          <div class="example-steps">
+            <div class="example-step">
+              $a = g\sin\theta = 9,82 \cdot \sin 30° = 9,82 \cdot 0,5 = 4,91$ m/s²
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E - Grundläggande</span>
+          <ol class="exercise-list">
+            <li>Beräkna accelerationen för ett föremål på ett friktionsfritt lutande plan med vinkeln 20°.</li>
+            <li>En låda (5 kg) ligger på ett plan med vinkel 30°. Beräkna kraften parallellt med planet.</li>
+            <li>Beräkna normalkraften på en låda (10 kg) på ett plan med vinkel 45°.</li>
+            <li>Vid vilken vinkel är den parallella kraften lika stor som normalkraften?</li>
+            <li>Ett objekt accelererar med 3 m/s² nedför ett friktionsfritt plan. Vilken är planets lutning?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C - Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>En låda (8 kg) glider nedför ett plan (35°) med μ = 0,2. Beräkna accelerationen.</li>
+            <li>En skidåkare (70 kg) åker nedför en backe (25°). Luftmotståndet är 50 N. Beräkna accelerationen om vi bortser från skidfriktionen.</li>
+            <li>En låda står stilla på ett plan med vinkel 20°. Vad är minsta friktionskoefficienten?</li>
+            <li>Ett block dras uppför ett lutande plan (30°) med friktionskoefficient 0,3. Hur stor kraft parallellt med planet krävs för konstant hastighet? Blocket väger 15 kg.</li>
+            <li>En boll rullar nedför en ramp (15°) och når botten efter 4 s. Hur lång är rampen?</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A - Avancerad</span>
+          <ol class="exercise-list" start="11">
+            <li>En vagn (10 kg) hålls på ett plan (40°) med ett rep parallellt med planet. Beräkna repkraften om μ = 0,15.</li>
+            <li>Två block är kopplade med ett snöre över en friktionsfri remskiva. Block A (5 kg) ligger på ett friktionsfritt plan (30°), Block B (3 kg) hänger fritt. Beräkna accelerationen.</li>
+            <li>En lastbil bromsar på en nedförsbacke (8°) med μ = 0,6. Beräkna bromssträckan från 20 m/s.</li>
+            <li>Förklara varför det är svårare att starta rörelse uppför ett lutande plan än att hålla konstant hastighet.</li>
+            <li>En kula släpps vid toppen av en ramp (2 m hög, 30° lutning). Den rullar nedför och sedan längs en horisontell sträcka med μ = 0,1. Hur långt rullar den på det horisontella?</li>
+          </ol>
+        </div>
+        
+        <div class="facit">
+          <button class="facit-toggle">Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li>3,36 m/s²</li>
+              <li>24,6 N</li>
+              <li>69,4 N</li>
+              <li>45°</li>
+              <li>≈ 17,8°</li>
+              <li>4,02 m/s²</li>
+              <li>3,43 m/s²</li>
+              <li>μ ≥ 0,36</li>
+              <li>111,5 N</li>
+              <li>20,3 m</li>
+              <li>51,8 N</li>
+              <li>0,60 m/s²</li>
+              <li>38,3 m</li>
+              <li>Statisk friktion är större än glidfriktion. Mer kraft behövs för att övervinna statisk friktion.</li>
+              <li>≈ 20 m</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      
+      <nav class="lesson-nav">
+        <a href="05-newtons-andra-lag.html" class="nav-btn">← Föregående</a>
+        <a href="07-kinematik.html" class="nav-btn">Nästa →</a>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

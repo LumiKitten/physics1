@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tryck & Hydraulik - Fysik Bas A</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script defer src="../app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="settings-panel">
+    <button class="settings-btn theme-toggle" onclick="toggleTheme()" title="Byt tema">☀️</button>
+    <button class="settings-btn focus-toggle" onclick="toggleFocus()" title="Fokusläge">🎯</button>
+    <button class="settings-btn font-toggle" onclick="toggleFont()" title="OpenDyslexic">Aa</button>
+  </div>
+  
+  <a href="../index.html" class="back-link">← Tillbaka till översikten</a>
+  
+  <main class="lesson-page">
+    <article class="lesson">
+      <header class="lesson-header">
+        <span class="lesson-badge">Lektion 12</span>
+        <h1 class="lesson-title">Tryck & Hydraulik</h1>
+      </header>
+      
+      <div class="learning-goals">
+        <h3>📚 Lärandemål</h3>
+        <ul>
+          <li>Beräkna tryck i vätskor på olika djup</li>
+          <li>Tillämpa Pascals princip</li>
+          <li>Analysera hydrauliska system</li>
+        </ul>
+      </div>
+      
+      <section class="section">
+        <h2 class="section-title">Tryck</h2>
+        
+        <div class="formula-box">
+          $$p = \frac{F}{A}$$
+          <p>Tryck = kraft / area</p>
+        </div>
+        
+        <div class="formula-box">
+          $$p = \rho g h$$
+          <p>Vätsketryck på djupet h</p>
+        </div>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr><th>Symbol</th><th>Storhet</th><th>Enhet</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>$p$</td><td>Tryck</td><td>Pa (Pascal) = N/m²</td></tr>
+              <tr><td>$F$</td><td>Kraft</td><td>N</td></tr>
+              <tr><td>$A$</td><td>Area</td><td>m²</td></tr>
+              <tr><td>$\rho$</td><td>Densitet</td><td>kg/m³</td></tr>
+              <tr><td>$h$</td><td>Djup</td><td>m</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2 class="section-title">Pascals princip</h2>
+        
+        <p>I en sluten vätska överförs tryckförändringar lika överallt. Detta är grunden för hydraulik.</p>
+        
+        <div class="formula-box">
+          $$\frac{F_1}{A_1} = \frac{F_2}{A_2}$$
+          <p>Pascals princip för hydraulik</p>
+        </div>
+        
+        <div class="info-box tip">
+          <h4>💡 Strategisk nyckel</h4>
+          <p>En liten kraft på en liten area ger samma tryck som en stor kraft på en stor area. <strong>Kraftförstärkning!</strong></p>
+        </div>
+        
+        <div class="formula-box">
+          $$\frac{F_2}{F_1} = \frac{A_2}{A_1} = \left(\frac{d_2}{d_1}\right)^2$$
+          <p>Kraftförstärkning via areaförhållande</p>
+        </div>
+        
+        <div class="example">
+          <div class="example-header">📝 Exempeluppgift</div>
+          <p>En hydraulpress har kolvar med diametrar 2 cm och 20 cm. Vilken kraft erhålls på den stora kolven om 100 N appliceras på den lilla?</p>
+          <div class="example-steps">
+            <div class="example-step">
+              $\frac{F_2}{F_1} = \left(\frac{d_2}{d_1}\right)^2 = \left(\frac{20}{2}\right)^2 = 100$<br>
+              $F_2 = 100 \cdot 100 = 10\,000$ N = 10 kN
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="exercises">
+        <h2 class="exercises-title">📝 Övningar</h2>
+        
+        <div class="exercise-level">
+          <span class="level-badge">Nivå E - Grundläggande</span>
+          <ol class="exercise-list">
+            <li>Beräkna trycket på 5 m djup i vatten.</li>
+            <li>En kraft på 500 N verkar på en yta med arean 0,1 m². Beräkna trycket.</li>
+            <li>Hur stort tryck ger atmosfären vid havsnivån? (ca 101 325 Pa, men verifiera med $\rho_{luft} = 1,29$ kg/m³ och h = 8 km)</li>
+            <li>En bil (1500 kg) vilar på 4 däck. Varje däcks kontaktyta är 200 cm². Beräkna trycket i däcken.</li>
+            <li>Beräkna tryckskillnaden mellan toppen och botten av ett 10 m högt vattentorn.</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge advanced">Nivå C - Tillämpning</span>
+          <ol class="exercise-list" start="6">
+            <li>En hydraulisk domkraft har kolvar med diameter 3 cm och 15 cm. Vilken kraft kan lyftas med 200 N på den lilla kolven?</li>
+            <li>Ett U-rör innehåller vatten. En oljekolonn (densitet 800 kg/m³) hälls i ena röret till 15 cm höjd. Hur mycket högre står vattnet på andra sidan?</li>
+            <li>En dykare känner ett totaltryck på 303 975 Pa. Hur djupt är dykaren? (atmosfärstryck = 101 325 Pa)</li>
+            <li>En hydraulcylinder ska lyfta 5 ton. Den lilla kolven har diameter 4 cm. Hur stor diameter behöver den stora kolven om maxkraften från pumpen är 500 N?</li>
+            <li>En sjö har en damm som är 8 m hög och 30 m bred. Beräkna den totala kraften på dammen.</li>
+          </ol>
+        </div>
+        
+        <div class="exercise-level">
+          <span class="level-badge expert">Nivå A - Avancerad</span>
+          <ol class="exercise-list" start="11">
+            <li>En ubåt befinner sig på 200 m djup. En lucka har arean 0,5 m². Vilken kraft krävs för att öppna luckan utåt?</li>
+            <li>En barometer visar 760 mmHg. Beräkna lufttrycket i Pascal. (Kvicksilvers densitet = 13 600 kg/m³)</li>
+            <li>En hydraulpress ska komprimera med 50 MPa. Den stora kolven har diameter 30 cm. Hur stor kraft krävs på den lilla kolven (3 cm diameter)?</li>
+            <li>Förklara varför dammar byggs tjockare nertill än upptill.</li>
+            <li>En tank innehåller två vätskor som inte blandar sig: 2 m olja (800 kg/m³) ovanpå 3 m vatten. Beräkna trycket vid tankens botten, inklusive atmosfärstryck.</li>
+          </ol>
+        </div>
+        
+        <div class="facit">
+          <button class="facit-toggle">Visa facit</button>
+          <div class="facit-content">
+            <ol>
+              <li>49 100 Pa ≈ 49 kPa</li>
+              <li>5 000 Pa</li>
+              <li>Teoretiskt ≈ 101 kPa (stämmer ungefär)</li>
+              <li>≈ 184 kPa</li>
+              <li>98 200 Pa ≈ 98 kPa</li>
+              <li>5 000 N = 5 kN</li>
+              <li>12 cm</li>
+              <li>≈ 20,6 m</li>
+              <li>≈ 40 cm</li>
+              <li>≈ 9,4 MN</li>
+              <li>≈ 981 kN</li>
+              <li>≈ 101 330 Pa</li>
+              <li>≈ 35,3 kN</li>
+              <li>Trycket ökar med djupet. Nedre delen måste motstå större horisontell kraft.</li>
+              <li>≈ 146 kPa</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      
+      <nav class="lesson-nav">
+        <a href="02-arkimedes.html" class="nav-btn">← Föregående</a>
+        <span class="nav-btn disabled">Nästa →</span>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>
